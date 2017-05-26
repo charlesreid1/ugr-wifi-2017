@@ -43,4 +43,40 @@ The poster directory contains an image and a PDF copy of the final poster presen
 
 Python and shell scripts used to capture wifi data from the Raspberry Pis.
 
+### Other code
 
+Some of the code on the backend was taken care of by me, Dr. Reid, for the students' benefit 
+(so they didn't have to get elbow deep in the nuances of virtualization, encrypted tunnels, 
+ SSL wrapping, and bypassing firewalls.)
+
+Several of these repositories are for setting up Docker containers on the virtual private server
+(we ran MongoDB, Stunnel, and Jupyter notebook out of Docker containers). The rest are scripts 
+run on the Raspberry Pi.
+
+Each of the following git repos is on [git.charlesreid1.com](https://git.charlesreid1.com/explore):
+
+**Docker:**
+
+[docker/d-stunnel](https://charlesreid1.com:3000/docker/d-stunnel) - repository with files for running an stunnel server in a docker container
+
+[docker/d-rsync](https://charlesreid1.com:3000/docker/d-rsync) - repository with files for running an rsync server in a docker container
+
+[docker/d-jupyter](https://charlesreid1.com:3000/docker/d-jupyter) - repository with files for running a Jupyter notebook server in a docker container 
+
+[docker/d-mongodb](https://charlesreid1.com:3000/docker/d-mongodb) - repository with files for running a MongoDB database in a docker container
+
+[docker/d-mongoexpress](https://charlesreid1.com:3000/docker/d-mongoexpress) - like phpMyAdmin, MongoExpress is a web-based client for interacting with MongoDB; this was also run in a docker container 
+
+**Raspberry Pi:**
+
+[rpi/process-wifi-data](https://charlesreid1.com:3000/rpi/pi-process-wifi-data) - code for processing wifi data
+
+[rpi/stunnel](https://charlesreid1.com:3000/rpi/pi-stunnel) - code for running an stunnel client on the rasbperry pi
+
+[rpi/aircrack-batch](https://charlesreid1.com:3000/rpi/pi-aircrack-batch) - code for running aircrack in batch mode to dump wifi data to CSV files at intervals
+
+[rpi/pi-startup-services](https://charlesreid1.com:3000/rpi/pi-startup-services) - startup scripts for the Raspberry Pi, allowing it to start airodump-ng and listen for nearby wifi signals on boot
+
+[rpi/pi-setup](https://charlesreid1.com:3000/rpi/pi-setup) - setup scripts for the Rasbperry Pis, to keep everything uniform across each Pi
+
+[rpi/transmission](https://charlesreid1.com:3000/rpi/pi-transmission) - code for connecting to a remote server using stunnel, and transferring data via rsync tunneled through stunnel
